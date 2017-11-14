@@ -1,27 +1,16 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity
-} from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
-export const Welcome = () => (
+export const Welcome = (props) => (
   <View style={{ flex: 1 }}>
     <View style={styles.titleContainer}>
-      <Text style={styles.title}>
-        Sweatbook
-      </Text>
+      <Text style={styles.title}>Sweatbook</Text>
     </View>
     <View style={styles.lastWorkoutContainer}>
-      <Text style={styles.lastWorkoutTitle}>
-        Log your fitness
-      </Text>
+      <Text style={styles.lastWorkoutTitle}>Log your fitness</Text>
     </View>
     <View style={{ padding: 30 }}>
-      <TouchableOpacity
-        style={styles.button}
-      >
+      <TouchableOpacity onPress={props.startWorkout} style={styles.button}>
         <Text>Start Workout</Text>
       </TouchableOpacity>
     </View>
@@ -31,33 +20,33 @@ export const Welcome = () => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   titleContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 0.2
+    flex: 0.2,
   },
   title: {
     fontSize: 48,
     fontWeight: '500',
     color: 'blue',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   lastWorkoutContainer: {
-    flex: 0.3
+    flex: 0.3,
   },
   lastWorkoutTitle: {
     fontSize: 30,
     fontWeight: '100',
-    color: 'blue'
+    color: 'blue',
   },
   button: {
     borderColor: '#EADCDC',
     padding: 10,
-    borderRadius: 10
+    borderRadius: 10,
   },
   buttonText: {
-    color: '#EADCDC'
-  }
+    color: '#EADCDC',
+  },
 });

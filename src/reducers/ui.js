@@ -8,7 +8,7 @@ export const ui = (state = {
 }, { type, payload }) => {
 
   switch (type) {
-    case types.SET_EXECERCISE_VISIBILITY:
+    case types.SET_EXERCISE_VISIBILITY:
       return {
         ...state,
         exerciseModal: payload
